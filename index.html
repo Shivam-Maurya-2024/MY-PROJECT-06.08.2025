@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Campus Pass Event Booking</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <!-- Navbar -->
+    <header class="navbar">
+        <h1 class="logo">Campus Pass</h1>
+        <nav>
+            <ul>
+                <li><a href="event-details.html">Events</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="#" id="loginBtn">Login</a></li>
+                <li><a href="#" id="signupBtn">Sign Up</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero -->
+    <section class="hero">
+        <video autoplay muted loop playsinline class="hero-bg-video">
+            <source src="https://cdn.pixabay.com/video/2015/10/03/896-141283020_large.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+        </video>
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <div class="animated-heading">
+                <h2>Campus Pass</h2>
+            </div>
+            <p>One Stop for All College Events</p>
+            <a href="#eventsSection" class="btn-primary">Explore Events</a>
+        </div>
+    </section>
+
+    <!-- Events Section -->
+    <section class="why-choose">
+        <h2>Why Choose Campus Pass?</h2>
+        <p class="subtitle">One Stop for All College Events</p>
+        <div class="features">
+            <div class="feature-card">
+                <i class="fas fa-calendar-check"></i>
+                <h3>Seamless Booking</h3>
+                <p>Book event tickets with just a click. No lines, no hassle — just tap and attend!</p>
+            </div>
+            <div class="feature-card">
+                <i class="fas fa-star"></i>
+                <h3>Curated Experiences</h3>
+                <p>From tech summits to cultural nights — only the best events, handpicked for you.</p>
+            </div>
+            <div class="feature-card">
+                <i class="fas fa-users"></i>
+                <h3>Meet Innovators</h3>
+                <p>Network with leaders, creators, and performers who inspire and challenge.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="events" id="eventsSection">
+        <h2>Upcoming Events</h2>
+        <!-- 🔽 College Filter Dropdown -->
+        <div class="filter-container" style="margin-bottom: 20px;">
+            <label for="collegeFilter"><strong>Filter by College:</strong></label>
+            <select name="college" id="collegeFilter">
+                <option value="">All Colleges</option>
+                <option value="MNIT">MNIT Jaipur</option>
+                <option value="JECRC">JECRC</option>
+                <option value="Poornima">Poornima University</option>
+                <option value="SKIT">SKIT</option>
+                <!-- Add more -->
+            </select>
+
+            <select>
+                <option value="">All Categories</option>
+                <option value="Tech">Tech</option>
+                <option value="Cultural">Cultural</option>
+                <option value="Career">Career</option>
+                <option value="Workshop">Workshop</option>
+            </select>
+            <input type="text" placeholder="Search events..." />
+        </div>
+
+        </div>
+
+        <div class="event-cards">
+            <!-- repeat event cards as before -->
+
+            <!-- Card 1 -->
+            <div class="card">
+                <img src="https://www.toppersnotes.com/wp-content/uploads/2016/08/maxresdefault.jpg" alt="Tech Fest">
+                <div class="card-content">
+                    <h3>Tech Fest 2025</h3>
+                    <p>25th Aug | 10:00 AM | Arya Main Auditorium</p>
+                    <span class="tag">Technology</span>
+                    
+                    <span class="badge live">Live Now</span>
+                    <p class="description">Explore AI, Robotics, Coding Hackathons, and more!</p>
+                    <button>Book Now</button>
+                </div>
+            </div>
+
+            <!-- Card 1: Blitzschlag - MNIT Jaipur -->
+            <div class="card">
+                <img src="https://blogger.googleusercontent.com/img/a/AVvXsEgWgcAet8o1TWERl9cATy3U65_4AhRYWR5iaO0M_gtfX3XkmI976lLvwLZh1t7nlXAPVUnkO7zJJ222X3kuv7qGFEyNcL5t-jR8mlSoL2XthiHU3ZSO1sr47AqQ93xLZTByACthX-zKoA1uNW-lZHoP0XzTFZMfydmSjAf2AgQ9ipR0jDxuudjdxhac=w487-h324" alt="Blitzschlag MNIT">
+                <div class="card-content">
+                    <h3>Blitzschlag 2025</h3>
+                    <p>7–9 Feb 2025 | MNIT Jaipur Campus Grounds</p>
+                    <span class="tag">Culture & Technology</span>
+                    <span class="badge upcoming">Upcoming</span>
+                    <p class="description">Jaipur’s largest fest: fashion show, dance battle, tech quizzes, robotics &
+                        pro‑nights featuring Zikrr, DJ Vaibhav & Vishal Mishra.</p>
+                    <button>Book Now</button>
+                </div>
+            </div>
+
+            <!-- Card 2: JU Rhythm - JECRC University -->
+            <div class="card">
+                <img src="https://jecrcuniversity.edu.in/wp-content/uploads/2025/05/image.jpg" alt="JU Rhythm JECRC">
+                <div class="card-content">
+                    <h3>JU Rhythm ’25</h3>
+                    <p>4–6 Mar 2025 | JECRC University</p>
+                    <span class="tag">Tech • Culture • Sports</span>
+                    <span class="badge planning">Planning Now</span>
+                    <p class="description">3‑day inter‑college extravaganza featuring robotics, fashion, rock bands,
+                        entrepreneurship talks, and e‑gaming zones.</p>
+                    <button>Book Now</button>
+                </div>
+            </div>
+
+            <!-- Card 3: Mridang - University Rajasthan College -->
+            <div class="card">
+                <img src="https://aiimsudr.ac.in/wp-content/uploads/2023/07/m31.jpg" alt="Mridang URC Jaipur">
+                <div class="card-content">
+                    <h3>Mridang 2025</h3>
+                    <p>Feb 2025 | UR College, Jaipur</p>
+                    <span class="tag">Cultural Festival</span>
+                    <span class="badge planning">Planning Now</span>
+                    <p class="description">Classical & contemporary arts with open mic, folk performances, theatre, and
+                        workshops on sustainable design.</p>
+                    <button>Book Now</button>
+                </div>
+            </div>
+
+            <!-- Card 4: Techvibes - BIT Jaipur -->
+            <div class="card">
+                <img src="https://bitmesra.ac.in/UploadedDocuments/user_adminjaipur/Header/Header4c687ad4983140eeb682cc9fda921a4f_vibration_25_21july25.JPG" alt="Techvibes BIT Jaipur">
+                <div class="card-content">
+                    <h3>Techvibes 2025</h3>
+                    <p>16–17 Mar 2025 | BIT Jaipur</p>
+                    <span class="tag">Tech Fest</span>
+                    <span class="badge upcoming">Upcoming</span>
+                    <p class="description">Coding contests, startup showcases, robotics maze runners & AI talks. EDM
+                        night and cash prizes await!</p>
+                    <button>Book Now</button>
+                </div>
+            </div>
+
+            <!-- Card 5: Samanvay - Kanoria College -->
+            <div class="card">
+                <img src="https://images.bhaskarassets.com/web2images/521/2025/01/11/whatsapp-image-2025-01-11-at-44258-pm_1736597695.jpeg" alt="Samanvay Kanoria College">
+                <div class="card-content">
+                    <h3>Samanvay 2025</h3>
+                    <p>9–11 Jan 2025 | Kanoria PG Mahila College</p>
+                    <span class="tag">Management Fest</span>
+                    <span class="badge live">Live Now</span>
+                    <p class="description">Inter-college events on advertising, business ideas, HR crisis, group
+                        discussion and quiz competitions.</p>
+                    <button>Book Now</button>
+                </div>
+            </div>
+
+            <!-- Card 6: Zenith - Poornima University -->
+            <div class="card">
+                <img src="https://lakshya.poornima.edu.in/_next/image?url=%2Fimages%2Fgallery%2F5.webp&w=3840&q=90" alt="Zenith Poornima University">
+                <div class="card-content">
+                    <h3>Zenith 2025</h3>
+                    <p>Spring 2025 | Poornima University, Jaipur</p>
+                    <span class="tag">Culture & Innovation</span>
+                    <span class="badge upcoming">Upcoming</span>
+                    <p class="description">A fusion of tech and culture: circuit wars, band battles, design exhibitions,
+                        and dance face-offs.</p>
+                    <button>Book Now</button>
+                </div>
+            </div>
+
+            <!-- Card 7: Abhivyakti - IIS University -->
+            <div class="card">
+                <img src="https://timesofindia.indiatimes.com/photo/msid-67978988,imgsize-697265.cms" alt="Abhivyakti IIS">
+                <div class="card-content">
+                    <h3>Abhivyakti 2025</h3>
+                    <p>Feb 2025 | IIS University, Jaipur</p>
+                    <span class="tag">Cultural</span>
+                    <span class="badge planning">Planning Now</span>
+                    <p class="description">A platform for students to express themselves via theatre, photography,
+                        creative writing, and fashion walk.</p>
+                    <button>Book Now</button>
+                </div>
+            </div>
+
+            <!-- Card 8: Jaipur Literature Festival -->
+            <div class="card">
+                <img src="https://images.lifestyleasia.com/wp-content/uploads/sites/7/2020/01/17185718/JLF-1820x910-1-1600x800.jpg" alt="Jaipur Literature Festival">
+                <div class="card-content">
+                    <h3>Jaipur Literature Festival ’25</h3>
+                    <p>30 Jan – 3 Feb 2025 | Clarks Amer, Jaipur</p>
+                    <span class="tag">Literature & Culture</span>
+                    <span class="badge planning">Planning Now</span>
+                    <p class="description">Meet authors, thinkers & journalists. Includes debates, poetry recitations,
+                        musical evenings and book launches.</p>
+                    <button>Book Now</button>
+                </div>
+            </div>
+
+            <!-- Card 9: AI & IoT Summit - SKIT Jaipur -->
+            <div class="card">
+                <img src="https://media.collegedekho.com/media/img/institute/crawled_images/None/NCDSC-2017_6.jpg" alt="AI Summit SKIT Jaipur">
+                <div class="card-content">
+                    <h3>AI & IoT Summit</h3>
+                    <p>April 2025 | SKIT Jaipur</p>
+                    <span class="tag">Technology</span>
+                    <span class="badge upcoming">Upcoming</span>
+                    <p class="description">National-level summit on AI, IoT and ML featuring industry talks, demos, and
+                        student innovation awards.</p>
+                    <button>Book Now</button>
+                </div>
+            </div>
+
+            <!-- Card 10: Gyanotsav - St. Xavier’s College -->
+            <div class="card">
+                <img src="https://cdn.pixabay.com/photo/2016/11/23/15/48/audience-1853662_1280.jpg" alt="Gyanotsav Xavier’s Jaipur">
+                <div class="card-content">
+                    <h3>Gyanotsav 2025</h3>
+                    <p>5–6 Feb 2025 | St. Xavier’s College, Jaipur</p>
+                    <span class="tag">Academics & Culture</span>
+                    <span class="badge live">Live Now</span>
+                    <p class="description">Paper presentations, quizzes, storytelling, elocution, and street plays in
+                        this annual academic fest.</p>
+                    <button>Book Now</button>
+                </div>
+            </div>
+
+            <!-- Card 11: Aranya - Amity University Jaipur -->
+            <div class="card">
+                <img src="https://www.amity.edu/jaipur/images/mor_img2.jpg" alt="Aranya Amity Jaipur">
+                <div class="card-content">
+                    <h3>Aranya 2025</h3>
+                    <p>Mar 2025 | Amity University, Jaipur</p>
+                    <span class="tag">Annual Fest</span>
+                    <span class="badge upcoming">Upcoming</span>
+                    <p class="description">Competitions in gaming, dance, photography, DJ wars and cultural extravaganza
+                        for 3 days.</p>
+                    <button>Book Now</button>
+                </div>
+            </div>
+
+
+        </div>
+    </section>
+
+    <!-- ... -->
+    </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-section about">
+                <h3>Campus Pass</h3>
+                <p>Your one-stop platform to explore and book all college events.</p>
+            </div>
+            <div class="footer-section links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="event-details.html">Events</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="#loginModal">Login</a></li>
+                    <li><a href="#signupModal">Sign Up</a></li>
+                </ul>
+            </div>
+            <div class="footer-section contact">
+                <h4>Contact</h4>
+                <p>Email: <a href="mailto:support@campuspass.in">support@campuspass.in</a></p>
+                <p>Phone: +91‑9876543210</p>
+                <p>Address: Campus Pass Office, Jaipur, Rajasthan</p>
+            </div>
+            <div class="footer-section social">
+                <h4>Follow Us</h4>
+                <div class="social-icons">
+                    <p><a href="#"><i class="fab fa-facebook-f"></i> Facebook</a></p>
+                    <p><a href="#"><i class="fab fa-twitter"></i> Twitter</a></p>
+                    <p><a href="#"><i class="fab fa-instagram"></i> Instagram</a></p>
+                    <p><a href="#"><i class="fab fa-linkedin-in"></i> LinkedIn</a></p>
+                </div>
+            </div>
+        </div>
+        <p class="footer-bottom">&copy; 2025 Campus Pass. All rights reserved.</p>
+    </footer>
+
+
+    <!-- Login Modal -->
+    <div class="modal" id="loginModal">
+        <div class="modal-content">
+            <span class="close" id="closeLogin">&times;</span>
+            <h2>Login</h2>
+            <input type="email" placeholder="Email" required />
+            <input type="password" placeholder="Password" required />
+            <button class="btn-primary">Login</button>
+            <p class="modal-note">Having trouble? Contact support at <a href="mailto:support@campuspass.in"
+                    style="color:#45a29e">support@campuspass.in</a></p>
+        </div>
+    </div>
+
+    <!-- Sign Up Modal -->
+    <div class="modal" id="signupModal">
+        <div class="modal-content">
+            <span class="close" id="closeSignup">&times;</span>
+            <h2>Sign Up</h2>
+            <input type="text" placeholder="Full Name" required />
+            <input type="email" placeholder="Email" required />
+            <input type="tel" placeholder="Phone Number" required />
+            <select required>
+                <option value="">Select Branch</option>
+                <option value="CSE">Computer Science</option>
+                <option value="ECE">Electronics & Communication</option>
+                <option value="ME">Mechanical</option>
+                <option value="CE">Civil</option>
+                <option value="IT">Information Technology</option>
+            </select>
+            <input type="password" placeholder="Password" required />
+            <button class="btn-primary">Register</button>
+            <p class="modal-note">Ensure your details are correct to receive event updates.</p>
+        </div>
+    </div>
+
+    <!-- Script remains exactly the same -->
+
+    <!-- Script -->
+    <script>
+        const loginModal = document.getElementById('loginModal');
+        const signupModal = document.getElementById('signupModal');
+
+        const loginBtn = document.getElementById('loginBtn');
+        const signupBtn = document.getElementById('signupBtn');
+        const closeLogin = document.getElementById('closeLogin');
+        const closeSignup = document.getElementById('closeSignup');
+
+        // Show modals only on button click
+        loginBtn.onclick = () => {
+            loginModal.style.display = 'flex';
+        };
+
+        signupBtn.onclick = () => {
+            signupModal.style.display = 'flex';
+        };
+
+        // Hide modals on close icon
+        closeLogin.onclick = () => {
+            loginModal.style.display = 'none';
+        };
+
+        closeSignup.onclick = () => {
+            signupModal.style.display = 'none';
+        };
+
+        // Hide modals when clicking outside modal content
+        window.onclick = (e) => {
+            if (e.target === loginModal) loginModal.style.display = 'none';
+            if (e.target === signupModal) signupModal.style.display = 'none';
+        };
+
+        // Optional: Hide modal after submitting login or signup
+        const loginSubmit = loginModal.querySelector('.btn-primary');
+        const signupSubmit = signupModal.querySelector('.btn-primary');
+
+        loginSubmit.onclick = () => {
+            loginModal.style.display = 'none';
+        };
+
+        signupSubmit.onclick = () => {
+            signupModal.style.display = 'none';
+        };
+    </script>
+
+
+
+</body>
+
+</html>
